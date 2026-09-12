@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}{{post.title}}{% endblock title %}
+
+{% block extra_head %}
+<style>
+    .page {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 56px 24px 80px;
+    }
+
+    .kicker {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 28px;
+    }
+
+    .kicker::before {
+        content: "";
+        width: 34px;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 2px;
+    }
+
+    .kicker span {
+        font-size: 14px;
+        color: var(--ink-soft);
+        font-weight: 500;
+    }
+
+    h1 {
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 800;
+        line-height: 1.5;
+        margin: 0 0 28px;
+        color: var(--ink);
+    }
+
+    .byline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 22px;
+        padding: 20px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 44px;
+    }
+
+    .byline-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--ink-soft);
+    }
+
+    .byline-item strong {
+        color: var(--ink);
+        font-weight: 600;
+    }
+
+    .byline-item svg {
+        width: 16px;
+        height: 16px;
+        stroke: var(--accent);
+        flex-shrink: 0;
+    }
+
+    .content {
+        font-size: 17px;
+        color: var(--ink);
+    }
+
+    .content p {
+        margin: 0 0 22px;
+    }
+
+    .content img {
+        max-width: 100%;
+        border-radius: 6px;
+        margin: 12px 0;
+    }
+
+    .content a {
+        color: var(--accent);
+        text-decoration-color: var(--line);
+        text-underline-offset: 3px;
+    }
+
+    .post-footer {
+        margin-top: 60px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .updated-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 8px 14px;
+        border-radius: 20px;
+    }
+
+    .updated-pill svg {
+        width: 14px;
+        height: 14px;
+        stroke: var(--accent);
+    }
+
+    @media (max-width: 480px) {
+        .page {
+            padding: 40px 18px 60px;
+        }
+        .byline {
+            gap: 8px 16px;
+        }
+        .post-footer {
+            justify-content: flex-start;
+        }
+    }
+</style>
+{% endblock extra_head %}
+
+{% block content %}
+<div class="page">
+    <div class="kicker">
+        <span>جزئیات پست</span>
+    </div>
+
+    <h1>{{post.title}}</h1>
+
+    <div class="byline">
+        <div class="byline-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+            </svg>
+            نوشته شده توسط <strong>{{post.author}}</strong>
+        </div>
+        <div class="byline-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2"/>
+                <path d="M3 10h18M8 3v4M16 3v4"/>
+            </svg>
+            منتشر شده در <strong>{{post.published_at}}</strong>
+        </div>
+    </div>
+
+    <div class="content">
+        {{post.content}}
+    </div>
+
+    <div class="post-footer">
+        <span class="updated-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 1 0 3-6.7"/>
+                <path d="M3 4v5h5"/>
+            </svg>
+            آخرین تغییر: {{post.updated_at}}
+        </span>
+    </div>
+</div>
+{% endblock content %}

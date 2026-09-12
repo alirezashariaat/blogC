@@ -1,11 +1,170 @@
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <title>Weblog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Weblog{% endblock title %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --paper: #f7f4ee;
+        --ink: #2b2620;
+        --ink-soft: #6b6255;
+        --line: #ddd6c8;
+        --accent: #7a4a3a;
+        --accent-soft: #efe6dd;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Vazirmatn', sans-serif;
+        line-height: 1.9;
+        -webkit-font-smoothing: antialiased;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .site-header {
+        border-bottom: 1px solid var(--line);
+    }
+
+    .site-header .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 28px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--ink);
+    }
+
+    .brand-mark {
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+        background: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .brand-mark svg {
+        width: 16px;
+        height: 16px;
+        stroke: var(--paper);
+    }
+
+    .brand-name {
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    .site-nav {
+        display: flex;
+        gap: 22px;
+    }
+
+    .site-nav a {
+        font-size: 14px;
+        color: var(--ink-soft);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .site-nav a:hover {
+        color: var(--accent);
+    }
+
+    main {
+        flex: 1;
+    }
+
+    .site-footer {
+        border-top: 1px solid var(--line);
+        margin-top: 40px;
+    }
+
+    .site-footer .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .site-footer span {
+        font-size: 13px;
+        color: var(--ink-soft);
+    }
+
+    @media (max-width: 480px) {
+        .site-header .wrap,
+        .site-footer .wrap {
+            padding: 20px 18px;
+        }
+        .site-nav {
+            gap: 14px;
+        }
+    }
+</style>
+{% block extra_head %}{% endblock extra_head %}
 </head>
 <body>
-{% block content %}
 
-{% endblock content %}
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="/">
+                <span class="brand-mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/>
+                        <path d="M14 3v6h6"/>
+                    </svg>
+                </span>
+                <span class="brand-name">وبلاگ</span>
+            </a>
+            <nav class="site-nav">
+                <a href="/">خانه</a>
+                <a href="/blog/posts">پست‌ها</a>
+                <a href="/about">درباره</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© تمامی حقوق محفوظ است</span>
+            <span>ساخته‌شده با ❤</span>
+        </div>
+    </footer>
 
 </body>
 </html>
