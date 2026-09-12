@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 # Managers
 class AcceptedPost(models.Manager):
     def get_queryset(self):
@@ -33,6 +34,8 @@ class Post(models.Model):
     accepted = AcceptedPost()
     def __str__(self):
         return f"{self.title}"
+    def get_absolute_url(self):
+        return reverse("blog:post_detail",args = [self.slug])
     class Meta:
         ordering = ['-published_at']
         indexes = [models.Index(fields=['title', 'published_at'])]
