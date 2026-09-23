@@ -4,13 +4,13 @@
 
 {% block extra_head %}
 <style>
-    .page {
+    .page_obj {
         max-width: 760px;
         margin: 0 auto;
         padding: 56px 24px 80px;
     }
 
-    .page-head {
+    .page_obj-head {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
@@ -19,14 +19,14 @@
         border-bottom: 1px solid var(--line);
     }
 
-    .page-head h1 {
+    .page_obj-head h1 {
         font-size: 28px;
         font-weight: 800;
         margin: 0;
         color: var(--ink);
     }
 
-    .page-head span {
+    .page_obj-head span {
         font-size: 14px;
         color: var(--ink-soft);
     }
@@ -97,7 +97,7 @@
     }
 
     @media (max-width: 480px) {
-        .page {
+        .page_obj {
             padding: 40px 18px 60px;
         }
     }
@@ -105,8 +105,8 @@
 {% endblock extra_head %}
 
 {% block content %}
-<div class="page">
-    <div class="page-head">
+<div class="page_obj">
+    <div class="page_obj-head">
         <h1>پست‌ها</h1>
         <span>{{ posts|length }} پست</span>
     </div>
@@ -131,5 +131,7 @@
         </li>
         {% endfor %}
     </ul>
+{% include "partials/paginator.html" %}
+
 </div>
 {% endblock content %}
