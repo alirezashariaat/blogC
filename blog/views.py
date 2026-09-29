@@ -19,11 +19,12 @@
 #     context = {'post': post}
 #     return render(request, 'blog/post-detail.html', context)
 
-from django.core.paginator import Paginator
+# from django.core.paginator import Paginator
 
-from django.shortcuts import render
+# from django.shortcuts import render
 from .models import Post
-from django.views.generic import ListView,DetailView
+from django.views.generic import ListView, DetailView
+
 
 class PostListView(ListView):
     queryset = Post.accepted.all()
@@ -31,9 +32,11 @@ class PostListView(ListView):
     template_name = 'blog/post_list.html'
     context_object_name = 'posts'
 
+
 class PostDetailView(DetailView):
     model = Post
     template_name = 'blog/post-detail.html'
     context_object_name = 'post'
+
     def get_queryset(self):
         return Post.accepted.all()
