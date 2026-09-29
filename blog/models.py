@@ -21,8 +21,8 @@ class Post(models.Model):
     # Post context
     title = models.CharField(max_length = 150,verbose_name='عنوان')
     content = models.TextField(verbose_name='محتوا')
-    slug = models.SlugField(max_length = 200, verbose_name = 'اسلاگ')
-    status = models.CharField(max_length = 3, choices=Status.choices ,default=Status.DRAFT, verbose_name='وضعیت انتشار')
+    slug = models.SlugField(max_length=200, verbose_name='اسلاگ')
+    status = models.CharField(max_length=3, choices=Status, default=Status.DRAFT, verbose_name='وضعیت انتشار')
     # Date related
     created_at = models.DateTimeField(auto_now_add = True)
     published_at = models.DateTimeField(blank = True,null = True)
@@ -41,9 +41,3 @@ class Post(models.Model):
         indexes = [models.Index(fields=['title', 'published_at'])]
         verbose_name = 'پست'
         verbose_name_plural = 'پست ها'
-
-
-
-
-
-
