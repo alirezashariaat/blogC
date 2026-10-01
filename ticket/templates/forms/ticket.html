@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block title %}ثبت تیکت{% endblock title %}
+
+{% block extra_head %}
+<style>
+    .page {
+        max-width: 620px;
+        margin: 0 auto;
+        padding: 56px 24px 80px;
+    }
+
+    .page-head {
+        margin-bottom: 28px;
+    }
+
+    .page-head h1 {
+        font-size: 26px;
+        font-weight: 800;
+        margin: 0 0 8px;
+        color: var(--ink);
+    }
+
+    .page-head p {
+        font-size: 14px;
+        color: var(--ink-soft);
+        margin: 0;
+    }
+
+    .messages {
+        list-style: none;
+        margin: 0 0 24px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .messages p {
+        margin: 0;
+        font-size: 14px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        border: 1px solid var(--line);
+    }
+
+    .non-field-errors {
+        list-style: none;
+        margin: 0 0 22px;
+        padding: 0;
+    }
+
+    .non-field-errors li {
+        font-size: 13px;
+        color: #a13d3d;
+        background: #fbeceb;
+        border-radius: 8px;
+        padding: 10px 14px;
+        margin-bottom: 8px;
+    }
+
+    .ticket-form {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 32px;
+    }
+
+    .ticket-form p {
+        margin: 0 0 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .ticket-form p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .ticket-form label {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink);
+    }
+
+    .ticket-form input,
+    .ticket-form textarea,
+    .ticket-form select {
+        font-family: 'Vazirmatn', sans-serif;
+        font-size: 15px;
+        color: var(--ink);
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 11px 14px;
+        width: 100%;
+        transition: border-color 0.15s ease;
+    }
+
+    .ticket-form textarea {
+        min-height: 140px;
+        resize: vertical;
+        line-height: 1.7;
+    }
+
+    .ticket-form input:focus,
+    .ticket-form textarea:focus,
+    .ticket-form select:focus {
+        outline: none;
+        border-color: var(--accent);
+    }
+
+    .ticket-form .helptext {
+        font-size: 12.5px;
+        color: var(--ink-soft);
+    }
+
+    .ticket-form ul.errorlist {
+        list-style: none;
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 13px;
+        color: #a13d3d;
+        background: #fbeceb;
+        border-radius: 6px;
+    }
+
+    .ticket-form ul.errorlist li {
+        margin: 0;
+    }
+
+    .ticket-form input[type="submit"] {
+        width: auto;
+        margin-top: 6px;
+        font-family: 'Vazirmatn', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--paper);
+        background: var(--accent);
+        border: none;
+        border-radius: 8px;
+        padding: 12px 28px;
+        cursor: pointer;
+        transition: opacity 0.15s ease;
+    }
+
+    .ticket-form input[type="submit"]:hover {
+        opacity: 0.9;
+    }
+
+    @media (max-width: 480px) {
+        .page {
+            padding: 40px 18px 60px;
+        }
+        .ticket-form {
+            padding: 22px;
+        }
+    }
+</style>
+{% endblock extra_head %}
+
+{% block content %}
+<div class="page">
+    <div class="page-head">
+        <h1>ثبت تیکت جدید</h1>
+        <p>مشکل یا درخواست خودت رو توضیح بده، تیم پشتیبانی در اسرع وقت بررسی می‌کنه.</p>
+    </div>
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li><p>{{ message }}</p></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form class="ticket-form" method="post" action="">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+        <ul class="non-field-errors">
+            {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {{ form.as_p }}
+        <input type="submit" value="ثبت تیکت">
+    </form>
+</div>
+{% endblock content %}
