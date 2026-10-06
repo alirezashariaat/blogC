@@ -1,11 +1,13 @@
 from django import forms
-from .models import Post
+from .models import Comment
 
 
-class PostForm(forms.ModelForm):
-    title = forms.CharField(max_length=150, widget=forms.Textarea)
-    content = forms.ChoiceField(widget=forms.TextInput)
-
+class CommentForm(forms.ModelForm):
     class Meta:
-        model = Post
-        fields = ['title', 'content']
+        Model = Comment
+        fields = ['first_name', 'last_name',
+                  'content',]
+        widgets = {
+            'first_name':forms.TextInput(), 'last_name':forms.TextInput(),
+                  'content':forms.Textarea(),
+        }

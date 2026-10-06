@@ -22,10 +22,11 @@
 # from django.core.paginator import Paginator
 
 # from django.shortcuts import render
-from .models import Post
+from .models import Post, Comment
 from django.views.generic import ListView, DetailView
-
-
+from django.views.decorators.http import require_POST
+from django.shortcuts import get_object_or_404
+from .forms import CommentForm
 class PostListView(ListView):
     queryset = Post.accepted.all()
     paginate_by = 3
@@ -40,3 +41,13 @@ class PostDetailView(DetailView):
 
     def get_queryset(self):
         return Post.accepted.all()
+
+
+@require_POST
+def post_comment(request, post_slug):  
+    post = get_object_or_404(Post,status = Post.Status.ACCEPTED,slug = post_slug)
+
+    # post = Post.accepted.filter(slug=post_slug) این خط میتواند جایگزین خط بالا باشد
+    form = CommentForm(data=request.POST)
+    if form.is_valid():
+        comment = form.save(commit=False)#commit زمانی استفاده میشود که

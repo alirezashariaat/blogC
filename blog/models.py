@@ -59,3 +59,22 @@ class Post(models.Model):
         indexes = [models.Index(fields=['title', 'published_at'])]
         verbose_name = 'پست'
         verbose_name_plural = 'پست ها'
+
+
+class Comment(models.Model):
+    first_name = models.CharField(max_length=50, verbose_name='نام')
+    last_name = models.CharField(max_length=70, verbose_name=' نام خانوادگی')
+    content = models.TextField(verbose_name='محتوا')
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments', verbose_name='پست')
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    active = models.BooleanField(
+        default=False, verbose_name='نمایش / عدم نمایش')
+
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'دیدگاه'
+        verbose_name_plural = 'دیدگاه ها'
+        indexes = [models.Index(fields=['first_name', 'created_at'])]
