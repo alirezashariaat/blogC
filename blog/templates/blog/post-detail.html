@@ -169,5 +169,14 @@
             آخرین تغییر: {{post.updated_at}}
         </span>
     </div>
+    <div>
+        <form method="POST" action="{% url "blog:post_comment" post.slug%}" >
+            {% csrf_token %}
+            
+            {{form.as_p}}
+            
+            <input type='submit' value='ثبت دیدگاه'>
+        </form>
+    </div>
 </div>
 {% endblock content %}

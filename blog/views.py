@@ -1,7 +1,6 @@
 # from multiprocessing import context
 # from django.core.paginator import Paginator
 #
-# from django.shortcuts import render
 # from .models import Post
 #
 #
@@ -22,11 +21,13 @@
 # from django.core.paginator import Paginator
 
 # from django.shortcuts import render
-from .models import Post, Comment
+from .models import Post
 from django.views.generic import ListView, DetailView
 from django.views.decorators.http import require_POST
-from django.shortcuts import get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from .forms import CommentForm
+
+
 class PostListView(ListView):
     queryset = Post.accepted.all()
     paginate_by = 3
@@ -43,11 +44,28 @@ class PostDetailView(DetailView):
         return Post.accepted.all()
 
 
-@require_POST
-def post_comment(request, post_slug):  
-    post = get_object_or_404(Post,status = Post.Status.ACCEPTED,slug = post_slug)
+def post_comment(request, slug):
+    """
+    Handles the creation of comments for a specific post.
+    Args:
+        request: The HTTP request object.
+        slug: The slug of the post for which the comment is being created.
+    Returns:
+        Renders the comment form template with the form and post context.
+    """
+    if request.method == 'POST':
+        # تمام فرم های دارای foreign key به این صورت میباشد
+        post = get_object_or_404(Post, status=Post.Status.ACCEPTED, slug=slug)
+        # post = Post.accepted.get(slug=slug) این خط میتواند جایگزین خط بالا باشد
+        form = CommentForm(data=request.POST)
+        if form.is_valid():
+            # commit زمانی استفاده میشود که فرم در دیتابیس ساخته شود اما سیو نه
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+            # form = CommentForm()
 
-    # post = Post.accepted.filter(slug=post_slug) این خط میتواند جایگزین خط بالا باشد
-    form = CommentForm(data=request.POST)
-    if form.is_valid():
-        comment = form.save(commit=False)#commit زمانی استفاده میشود که
+        else:
+            form = CommentForm()
+    context = {'form': form, 'post': post, }
+    return render(request, 'blog/forms/comment.html', context)
