@@ -1,0 +1,1476 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$sbYYi8rd9E0vyVLwekVNP9$qwC3FAPmqV9IZlSfmuIWCBtJOdr2b2CH1i0jc4UiOIw=",
+        "last_login": "2026-10-20T11:51:48.491Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "alirezzasrt@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-09-11T22:54:11.147Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "105gq1vbtvyqtn2npsknw63bmgbvlemg",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAMAP_iGUWkiePQkZ03VI7jkAJqpaadEH9HlTrAene6Nwy8rXXYmi7DmKEHC6dfllieOu0iP3i6z0bmaV3GZPbEHLaZ25z1dT3av0HlVqEHDp44nJ2jEAULURHrvQ0uWIy2YEcSE2Mu2nlEREekknNJF3VKKPD5Ar6EN4w:1x5LQe:vcEvczyry1mqMiCY9r5-1xcojpxv4awGKzYAtsWY0i4",
+        "expire_date": "2026-09-26T10:57:52.301Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1lz98oqainho810lv3y0d2ykifw3gqtc",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAMAP_iGUWkiePQkZ03VI7jkAJqpaadEH9HlTrAene6Nwy8rXXYmi7DmKEHC6dfllieOu0iP3i6z0bmaV3GZPbEHLaZ25z1dT3av0HlVqEHDp44nJ2jEAULURHrvQ0uWIy2YEcSE2Mu2nlEREekknNJF3VKKPD5Ar6EN4w:1xCEwf:Z1gnPJKfkHOJGyFhaKm2ChJcfK6lYM5I-085LANj8to",
+        "expire_date": "2026-10-15T11:27:25.183Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1wj4wu1rynp4ncnx13mp3lia71ha6icl",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAMAP_iGUWkiePQkZ03VI7jkAJqpaadEH9HlTrAene6Nwy8rXXYmi7DmKEHC6dfllieOu0iP3i6z0bmaV3GZPbEHLaZ25z1dT3av0HlVqEHDp44nJ2jEAULURHrvQ0uWIy2YEcSE2Mu2nlEREekknNJF3VKKPD5Ar6EN4w:1xDmxs:ShSc0C4Sd5QmQXy3fxBY3UtLQgBnKSJTi-h9SDwFlVo",
+        "expire_date": "2026-10-19T17:59:04.265Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "530h64hhrh0urexpuayarqyi7guvz0hn",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAMAP_iGUWkiePQkZ03VI7jkAJqpaadEH9HlTrAene6Nwy8rXXYmi7DmKEHC6dfllieOu0iP3i6z0bmaV3GZPbEHLaZ25z1dT3av0HlVqEHDp44nJ2jEAULURHrvQ0uWIy2YEcSE2Mu2nlEREekknNJF3VKKPD5Ar6EN4w:1xJ8Ng:Y_J4a2QCw3czsMoMiKpGs1VAhFFP3rIOWpStlUzU3ss",
+        "expire_date": "2026-11-03T11:51:48.494Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ihzd197ul0xvwtwyyjo54ymu0tdbx7ka",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAMAP_iGUWkiePQkZ03VI7jkAJqpaadEH9HlTrAene6Nwy8rXXYmi7DmKEHC6dfllieOu0iP3i6z0bmaV3GZPbEHLaZ25z1dT3av0HlVqEHDp44nJ2jEAULURHrvQ0uWIy2YEcSE2Mu2nlEREekknNJF3VKKPD5Ar6EN4w:1xBevp:wZOwCjp27gC1lrr6pGiSI28vA4Yb76pjoN4LP5JbUEw",
+        "expire_date": "2026-10-13T21:00:09.307Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "jxvhf7djnjkj5k0sh5latia2vm9q1dyg",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAMAP_iGUWkiePQkZ03VI7jkAJqpaadEH9HlTrAene6Nwy8rXXYmi7DmKEHC6dfllieOu0iP3i6z0bmaV3GZPbEHLaZ25z1dT3av0HlVqEHDp44nJ2jEAULURHrvQ0uWIy2YEcSE2Mu2nlEREekknNJF3VKKPD5Ar6EN4w:1x92sg:iVkRR0urE1Az9sqs3cNC0yF_gUSd9gNLnGeD6RHmg7w",
+        "expire_date": "2026-10-06T15:58:06.904Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rcjegubigg64e9q5tmiwwe3uhofhlmc7",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAMAP_iGUWkiePQkZ03VI7jkAJqpaadEH9HlTrAene6Nwy8rXXYmi7DmKEHC6dfllieOu0iP3i6z0bmaV3GZPbEHLaZ25z1dT3av0HlVqEHDp44nJ2jEAULURHrvQ0uWIy2YEcSE2Mu2nlEREekknNJF3VKKPD5Ar6EN4w:1xENyJ:q5yrA0lKiPsdtLgMHM6FEARzHAePkGgFL44JNlnG_ys",
+        "expire_date": "2026-10-21T09:29:59.475Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "yp4p6gd14t075fq6ex3057tadq3abz6x",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAMAP_iGUWkiePQkZ03VI7jkAJqpaadEH9HlTrAene6Nwy8rXXYmi7DmKEHC6dfllieOu0iP3i6z0bmaV3GZPbEHLaZ25z1dT3av0HlVqEHDp44nJ2jEAULURHrvQ0uWIy2YEcSE2Mu2nlEREekknNJF3VKKPD5Ar6EN4w:1x5A8u:4tg1vJZsTV2e2wmOZj_nMcCZiOxI3mqiT22JagfDbmw",
+        "expire_date": "2026-09-25T22:54:48.429Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+        "title": "Salam",
+        "content": "Test 1\r\nTest 1Test 1Test 1Test 1Test 1\r\nTest 1",
+        "slug": "salam",
+        "status": "ACC",
+        "created_at": "2026-09-11T23:03:23.157Z",
+        "published_at": "2026-09-11T23:03:06Z",
+        "updated_at": "2026-09-12T12:23:03.115Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+        "title": "ایجنت‌های OpenAI پیش از هک هاگینگ فیس به RubyGems حمله کرده بودند",
+        "content": "به گفته پژوهشگران، ایجنت‌های هوش مصنوعی OpenAI، دو ماه پیش از هک پلتفرم متن‌باز Hugging Face، به سرویس نرم‌افزاری RubyGems حمله کرده بودند. این تازه‌ترین مورد از حملات سایبری مرتبط با توسعه‌دهندگان بزرگ هوش مصنوعی است که نگرانی عمومی را افزایش داده و به درخواست‌ها برای وضع مقررات سخت‌گیرانه‌تر دامن زده است.",
+        "slug": "open_ai_agents_before_hackin",
+        "status": "ACC",
+        "created_at": "2026-09-12T19:19:28.251Z",
+        "published_at": "2026-09-12T19:19:16Z",
+        "updated_at": "2026-09-12T19:19:28.251Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+        "title": "چت‌جی‌پی‌تی به تسهیل تیراندازی در یک مدرسه آمریکایی متهم شد!",
+        "content": "دولت استان بریتیش کلمبیا در کانادا دادخواستی رسمی علیه اوپن‌ای‌آی و سم آلتمن، مدیرعامل این مجموعه، در دادگاه منطقه‌ای شمال کالیفرنیا ثبت کرد.\r\n\r\nپرونده‌ی ۳۹ صفحه‌ای مذکور، توسعه‌دهنده‌ی ChatGPT را به نقض استانداردهای ایمنی، سهل‌انگاری و معاونت در تیراندازی مرگبار مدرسه‌ای در شهر تامبلر ریج متهم می‌کند؛ رویدادی که به کشته‌شدن هشت نفر و زخمی‌شدن بیش از ۲۵ تن انجامید.\r\n\r\nبه روایت وال‌استریت ژورنال، مظنون ۱۸ ساله‌ی این حادثه که پس از حمله جان باخت، سناریوهای خشونت مسلحانه را طی چندین روز در گفت‌و‌گو با چت‌بات توصیف کرده بود. کارکنان اوپن‌ای‌آی ماه‌ها پیش از وقوع فاجعه هشدارهایی درباره‌ی نحوه‌ی استفاده‌ی کاربر مطرح کرده بودند؛ اما مدیران ارشد در نهایت تصمیم گرفتند موضوع را به نهادهای انتظامی اطلاع ندهند.\r\n\r\nنیکی شارما، دادستان کل بریتیش کلمبیا، گفت: «در هر شرایط دیگری که فردی به ارتکاب جرم کمک کند، دیگران را تشویق کند، تبانی کند یا مرتکب سهل‌انگاری جنایی شود، می‌توان علیه او تحقیق، پیگرد و قضاوت قضایی انجام داد. هیچ معافیتی برای هوش مصنوعی در اصول حقوق کیفری وجود ندارد.»\r\n\r\nدرو پوساتری، سخنگوی اوپن‌ای‌آی، گفت: «آنچه در تامبلر ریج رخ داد، تراژدی توصیف‌ناپذیری بود.»\r\n\r\nاو تأکید کرد که توسعه‌دهندگان به همکاری با نهادهای دولتی و مجری قانون برای ارتقای استانداردهای ایمنی متعهد می‌مانند.\r\n\r\nدادستان کل با اشاره به خطرات جدی فناوری‌های نوین خواستار پاسخگویی حقوقی نهادهای مسئول شد. نیکی شارما گفت: «هیچ شرکتی نباید صرفا به این دلیل که فناوری جدید است، از پاسخگویی معاف شود.»",
+        "slug": "chat-GPT-is-getting-accused-of-a-great-massacre",
+        "status": "ACC",
+        "created_at": "2026-09-22T16:00:00.350Z",
+        "published_at": "2026-09-22T15:59:47Z",
+        "updated_at": "2026-09-22T16:00:00.350Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+        "title": "آپدیت One UI 9 گوشی‌های سامسونگ تأخیر خورد",
+        "content": "سامسونگ ظاهرا انتشار سراسری به‌روزرسانی One UI 9 مبتنی‌بر اندروید ۱۷ را دست‌کم در برخی مناطق عقب انداخته تا روند انتشار با احتیاط بیشتری پیش برود.\r\n\r\nبر اساس یافته‌های وب‌سایت SammyGuru، پرچمدار کنونی سامسونگ یعنی گلکسی S26 قرار بود نخستین دریافت‌کننده‌ی رابط کاربری جدید باشد اما بررسی‌ها نشان می‌دهد تاکنون هیچ کاربری موفق به دریافت بیلد نهایی نشده است.\r\n\r\nنشانه‌های تعویق ابتدا در اطلاعیه‌ی رسمی وبگاه خبری سامسونگ در تایلند مشاهده شد. متن اطلاعیه ابتدا تاریخ ۲۱ سپتامبر (۳۰ شهریور) را برای انتشار مشخص کرده بود، سپس موعد انتشار به ۲۸ سپتامبر (۶ مهر) موکول شد و در نهایت تاریخ دقیق به‌طور کامل از متن حذف شد تا صرفا عبارت کلی «سپتامبر ۲۰۲۶» (شهریور و مهر ۱۴۰۵) باقی بماند.\r\n\r\nچنین تغییراتی در تقویم نرم‌افزاری سامسونگ بی‌سابقه به شمار نمی‌رود و در گذشته نیز نسخه‌های مختلف در سکوت خبری به تعویق افتاده بودند. با وجود این‌که آغاز مسیر One UI 9 با چالش روبه‌رو شده، انتظار می‌رود موانع فنی در کوتاه‌ترین زمان برطرف شوند.\r\n\r\nآیا نشانه‌ای از دریافت به‌روزرسانی جدید روی گوشی خود مشاهده کرده‌اید؟ نظرات خود را با ما در میان بگذارید.",
+        "slug": "new-one-ui-update-for-samsung-phones-has-been-delayed",
+        "status": "ACC",
+        "created_at": "2026-09-22T16:01:12.193Z",
+        "published_at": "2026-09-22T16:01:08Z",
+        "updated_at": "2026-09-22T16:01:12.193Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+        "title": "نرم‌افزار قدرتمند پریمیر به اندروید آمد؛ رایگان و مجهز به قالب‌های آماده یوتیوب",
+        "content": "کاربران سیستم‌عامل اندروید سال‌ها در انتظار یک ابزار تدوین ویدیویی تمام‌عیار از سوی ادوبی بودند و ماه‌ها پس از انتشار نسخه‌ی بازطراحی‌شده‌ی ادوبی پریمیر برای گوشی‌های آیفون حالا نوبت به اکوسیستم گوگل رسیده است تا میزبان یکی از توانمندترین برنامه‌های ویرایش ویدیو روی گوشی‌های هوشمند باشد.\r\n\r\nادوبی نسخه‌ی جدید پریمیر را با امکانات کم‌نظیری مثل تایم‌لاین چندلایه، بهینه‌سازی اختصاصی برای گوشی‌های تاشو و قالب‌های آماده برای تولیدکنندگان محتوای ویدیویی منتشر کرده است. نرم‌افزار جدید با رویکردی کاملا متفاوت نسبت به نسخه‌های قدیمی موبایلی توسعه یافته و تجربه‌ای نزدیک به نسخه‌ی دسکتاپ Premiere Pro را روی نمایشگرهای کوچک بازآفرینی می‌کند.",
+        "slug": "adobe-premiere-is-coming-for-android",
+        "status": "ACC",
+        "created_at": "2026-09-22T16:03:18.544Z",
+        "published_at": "2026-09-22T16:03:15Z",
+        "updated_at": "2026-09-22T16:03:18.544Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 6,
+    "fields": {
+        "title": "بیتس ۳۶۰ رونمایی شد؛ هدفون کوبنده اپل با قابلیت شخصی‌سازی بالشتک‌ها",
+        "content": "بیتس، یکی از سرشناس‌ترین زیرمجموعه‌های اپل، پس از ماه‌ها انتشار تیزرها و افشای اطلاعات غیررسمی، سرانجام پرچمدار جدید خود را با نام بیتس ۳۶۰ رونمایی کرد. بر اساس آنچه بیتس می‌گوید، قیمت هدفون ۳۴۹٫۹۹ دلار است.\r\n\r\nطراحی جدید بیتس ۳۶۰ گواهی بر دگرگونی رویکرد این برند در تولید هدفون‌های دورگوشی (Over-Ear) به شمار می‌رود. این محصول، به گفته‌ی بیتس، تمرکز ویژه‌ای بر کیفیت صدا، راحتی و شخصی‌سازی دارد.\r\n\r\nبیتس ۳۶۰ جایگزین هدفون نام‌آشنای بیتس استودیو پرو نخواهد شد و آن محصول با کاهش قیمت به ۲۹۹٫۹۹ دلار همچنان در سبد محصولات باقی می‌ماند. در مقایسه با نسل‌های پیشین، هدفون جدید یک معماری آکوستیک کاملا تازه دارد که تا ۱٫۷۵ برابر حذف نویز فعال (ANC) قدرتمندتر و ۱۲ دسی‌بل افزایش حجم صدای خروجی را در کنار حفظ شفافیت در تمام فرکانس‌ها به ارمغان می‌آورد.",
+        "slug": "beats-360-has-announced",
+        "status": "ACC",
+        "created_at": "2026-09-22T16:04:17.550Z",
+        "published_at": "2026-09-22T16:04:15Z",
+        "updated_at": "2026-09-22T16:04:17.550Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 7,
+    "fields": {
+        "title": "رکورد چاپ پول شکست",
+        "content": "رشد نقدینگی در مرداد امسال نسبت به مرداد ۱۴۰۴، به حدود ۵۴ درصد رسیده؛ رقمی که از شکستن رکورد ۵۲ ساله چاپ پول در کشور حکایت دارد.\r\n\r\nعبدالناصر همتی رئیس‌کل بانک مرکزی روز گذشته اعلام کرد رشد نقدینگی در پنج ماه نخست امسال به ۱۹ درصد رسیده.\r\n\r\nبا احتساب این رشد ۱۹ درصدی طی پنج ماه نخست سال، حجم نقدینگی کشور از حدود ۱۵ هزار و ۵۸۱ همت در پایان سال ۱۴۰۴، تا پایان مرداد امسال به رقم تقریبی ۱۸ هزار و ۵۴۱ همت رسیده است.\r\n\r\nاما اگر همین رقم محاسبه‌شده -یعنی ۱۸ هزار و ۵۴۱ همت- را نه با ابتدای سال، بلکه با مرداد سال گذشته مقایسه کنیم، ماجرا تغییر می‌کند.\r\n\r\nدر مرداد ۱۴۰۴، نقدینگی حدود ۱۲ هزار و ۱۵ همت بود؛ یعنی طی یک سال، حجم نقدینگی کشور حدود ۵۴ درصد رشد کرده است.\r\n\r\nاین عدد -رشد نقطه‌به‌نقطه نقدینگی در مرداد امسال نسبت به مرداد سال قبل- بر اساس داده‌های بانک مرکزی، بالاترین نرخ رشد نقدینگی از ابتدای سال ۱۳۵۴ تاکنون است. وقتی نقدینگی طی یک سال ۵۴.۳ درصد افزایش پیدا می‌کند، یعنی پول بیشتری در شبکه بانکی و اقتصاد جریان پیدا کرده است.\r\n\r\nبا این حال، هنوز داده‌های کامل ماه‌های فروردین تا مرداد امسال به‌طور کامل منتشر نشده و نمی‌توان با قطعیت درباره تک‌تک ماه‌های امسال نظر داد. اما همین رقم ثبت‌شده برای مرداد، به‌تنهایی برای شکستن این رکورد کافی بوده است.\r\n\r\nدر ویدئوی زیر، روند تغییرات نرخ رشد نقدینگی از ابتدای سال ۱۳۵۴ تا مرداد ۱۴۰۵ را مشاهده می‌کنید.",
+        "slug": "printing-cash-is-getting-outrages",
+        "status": "ACC",
+        "created_at": "2026-09-22T16:05:01.565Z",
+        "published_at": "2026-09-22T16:04:55Z",
+        "updated_at": "2026-09-22T16:05:01.565Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 8,
+    "fields": {
+        "title": "شوالیه تاریکی؛ مدل ۱٬۰۰۱ اسب‌بخاری لامبورگینی رونمایی شد",
+        "content": "تیونر اسپانیایی ونوم بلک از پروژه‌ی جدید خود بر پایه سوپر اسپرت هیبریدی لامبورگینی روئلتو پرده برداشت. نام این نسخه‌ی اختصاصی Voltoro V1 است و چهره‌ی خودرو را با قطعات فیبر کربنی و تم تاریک دگرگون می‌کند.\r\n\r\nتغییرات ظاهری شامل کیت بدنه عریض، اسپلیتر بزرگ جلو، کاپوت بازطراحی‌شده با خروجی‌های هوای بیشتر و یک بالچه ثابت در بخش عقب می‌شود. رینگ‌های طلایی توربینی در تضاد با رنگ تمام مشکی بدنه، جلوه‌ای متفاوت به نمای جانبی بخشیده‌اند.",
+        "slug": "lamborghini-revuelto",
+        "status": "ACC",
+        "created_at": "2026-09-22T16:06:01.467Z",
+        "published_at": "2026-09-22T16:05:58Z",
+        "updated_at": "2026-09-22T16:06:01.467Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 9,
+    "fields": {
+        "title": "مایکروسافت در اقدامی تاریخی، مجموعه Halo را به ناشر بازی‌های Call of Duty واگذار کرد",
+        "content": "مایکروسافت در اقدامی تاریخی و غافلگیرکننده، ساختار مدیریتی بخش بازی‌سازی خود را دستخوش تغییری بنیادین کرد تا سکان هدایت بزرگ‌ترین مجموعه‌هایش را به بازوی تازه‌نفس خود واگذار کند. مهم‌ترین محور این تصمیم‌گیری، انتقال توسعه‌ی نسخه‌ی بعدی مجموعه‌ی Halo به اکتیویژن است؛ تصمیمی که مرزهای میان استودیوهای زیرمجموعه را بازتعریف می‌کند.\r\n\r\nدامنه‌ی تغییرات، فراتر از مجموعه‌ی Halo رفته و بازی‌هایی مانند Sea of Thieves و Age of Empires نیز تحت مدیریت اکتیویژن قرار گرفته‌اند. بخشی از این بازنگری با تعدیل ۲۶۸ فرصت شغلی در ایکس باکس همراه شده و حتی استودیوی نام‌آشنای Ninja Theory را در آستانه‌ی تعطیلی کامل قرار داده است.\r\n\r\nشرکت Halo Studios که پیش‌تر با نام 343Industries شناخته می‌شد، تحت‌تاثیر این تحولات قرار گرفته است. این استودیو همچنان به پشتیبانی از بازی‌های فعلی نظیر Halo Infinite و Halo: Campaign Evolved ادامه خواهد داد، اما وظیفه‌ی ساخت نسخه‌ی بعدی این جهان حماسی به‌طور کامل به تیمی مستقل در اکتیویژن سپرده شده است.\r\n\r\nمت بوتی، مدیر ارشد محتوای ایکس‌باکس، در یادداشتی داخلی خطاب به کارکنان نوشت: «اکتیویژن نسخه‌ی بعدی Halo را با هدایت تیمی تازه و تخصصی توسعه خواهد داد که کاملا مستقل از فرآیند توسعه و برنامه‌های Call of Duty فعالیت می‌کند. گروهی کوچک در Halo Studios نیز به پشتیبانی از جامعه‌ی مخاطبان و بازی‌های فعال در بازار ادامه می‌دهد.»\r\n\r\nرئیس اکتیویژن درباره‌ی چشم‌انداز آینده بیان کرد: «هدف ما برای Halo مشخص است؛ ساخت برترین بازی تاریخ این مجموعه که شایسته‌ی عظمت و میراث آن باشد و هم‌زمان به ریشه‌های اصیلی که بازیکنان را شیفته‌ی خود کرد، وفادار بماند. این جاه‌طلبی بزرگی محسوب می‌شود که مجموعه‌ی مذکور لیاقتش را دارد و گردهم‌آوری تیمی متشکل از استعدادهای کم‌نظیر برای ارائه‌ی فصل بعدی آغاز شده است.»\r\n\r\nسازمان‌دهی دوباره‌ی مایکروسافت با هدف کوچک‌سازی واحدهای عملیاتی، هم‌راستاسازی تیم‌های همکار و متمرکز ساختن تخصص‌های نشر بازی‌ها شکل گرفته است. استودیوی World's Edge، سازنده‌ی مجموعه‌ی Age of Empires، در کنار تیم بریتانیایی Rare، خالق بازی Sea of Thieves، به اکتیویژن پیوسته‌اند.",
+        "slug": "microsoft-has-given-the-rights-of-halo-to-activios",
+        "status": "ACC",
+        "created_at": "2026-09-22T16:07:11.364Z",
+        "published_at": "2026-09-22T16:07:07Z",
+        "updated_at": "2026-09-22T16:07:11.364Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 10,
+    "fields": {
+        "title": "ایکس‌باکس باز هم تعدیل نیرو کرد؛ احتمال تعطیلی سازنده بازی هل‌بلید",
+        "content": "بخش گیمینگ مایکروسافت در ادامه‌ی بازسازی ساختاری، ۲۶۸ نفر دیگر از نیروهای تیم ایکس باکس را تعدیل کرد. روندی که نشان‌دهنده‌ی تداوم تحولات اساسی در ساختار مدیریتی و استودیوهای بازی‌سازی این غول فناوری است و چشم‌انداز آینده‌ی برخی تیم‌های باسابقه را در هاله‌ای از ابهام قرار می‌دهد.\r\n\r\nدور جدید تعدیل‌ها بخشی از برنامه‌ی کاهش ۳٬۲۰۰ فرصت شغلی به شمار می‌رود که تا پایان سال مالی ۲۰۲۷ مایکروسافت برنامه‌ریزی شده است. پیش از این نیز ۱٬۶۰۰ کارمند بخش ایکس‌باکس کار خود را از دست داده بودند؛ اقدامی که آشا شارما، مدیرعامل ایکس‌باکس، آن را «بزرگ‌ترین بازسازی ساختاری در تاریخ ایکس‌باکس» نامیده بود.\r\n\r\nتعدیل‌های اخیر دامن‌گیر Halo Studios، بخش مدیریت XGS و تیم‌های پشتیبانی مرکزی شده است. هم‌زمان، برنامه‌ی واگذاری استودیوهای داخلی با چالش‌های غیرمنتظره‌ای مواجه شد. در حالی که دو استودیوی Double Fine و Compulsion Games با موفقیت مسیر استقلال را طی کردند، توافق‌های مربوط به فروش استودیوی سازنده‌ی هل‌بلید با شکست روبه‌رو شد.\r\n\r\nمت بوتی، مدیر ارشد محتوای ایکس‌باکس، در یادداشتی به کارکنان توضیح داد: «متاسفانه دو توافق مجزا برای فروش Ninja Theory به نتیجه نرسید. ما اکنون روند رایزنی با کارکنان را درباره‌ی پیشنهاد تعطیلی استودیو آغاز می‌کنیم، هرچند به بررسی راه‌های جایگزین ادامه خواهیم داد.»\r\n\r\nفروش استودیوی Undead Labs طبق توافقات مشابه در حال پیشرفت است. وضعیت استودیوی Arkane و پروژه‌ی بازی Blade نیز به‌دلیل الزامات قوانین کار در فرانسه، در قالب جلسات مشاوره بررسی می‌شود و این گفتگوها تا پایان سال میلادی ادامه خواهد داشت.\r\n\r\nبخش دیگری از این دگرگونی بزرگ، انتقال مدیریت مجموعه‌های کلیدی است. مایکروسافت مدیریت مجموعه‌ی محبوب Halo را در کنار بازی Sea of Thieves و استودیوی World's Edge (خالق مجموعه‌ی Age of Empires) به اکتیویژن سپرده است تا تمرکز عملیاتی روی توسعه‌ی این آثار با سازوکار متفاوتی دنبال شود.",
+        "slug": "xbox-is-firring-their-staff",
+        "status": "ACC",
+        "created_at": "2026-09-22T16:08:10.863Z",
+        "published_at": "2026-09-22T16:08:07Z",
+        "updated_at": "2026-10-19T17:38:33.850Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 11,
+    "fields": {
+        "title": "قابلیت‌های کاربردی جیمیل اندروید برای رهایی از شلوغی ایمیل‌ها",
+        "content": "ایمیل‌های کاری، خبرنامه‌ها، اعلان‌های اشتراک و پیام‌های شخصی خیلی زود صندوق ورودی جیمیل را به انباری درهم‌ریخته تبدیل می‌کنند. برای مدیریت ایمیل نیازی به نصب اپلیکیشن جدید ندارید زیرا قابلیت‌های برنامه‌ی جیمیل به سازماندهی پیام‌ها کمک می‌کنند و بیشتر کاربران هرگز از آن‌ها بهره نمی‌برند.\r\n\r\nدر این مقاله یاد می‌گیرید چطور با چند تنظیم ساده در نسخه‌ی اندروید جیمیل مثل برچسب‌ها و حرکات کشیدن انگشت و اتصال به گوگل Tasks، صندوق ورودی‌تان را سازمان‌دهی کنید و بهره‌وری‌تان را بالا ببرید.",
+        "slug": "467509-gmail-android-best-features",
+        "status": "RJ",
+        "created_at": "2026-09-22T16:09:42.539Z",
+        "published_at": "2026-09-22T16:09:36Z",
+        "updated_at": "2026-09-29T21:00:21.499Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 12,
+    "fields": {
+        "title": "راز دایناسور سبز پرنده؛ توهم عجیب دختری ۱۶ ساله ریشه‌ای غیرمنتظره داشت",
+        "content": "دختر نوجوانی در کالیفرنیای آمریکا با علائم عجیبی به اورژانس مراجعه کرد. او می‌گفت دایناسور سبزرنگی را می‌بیند که در هوا پرواز می‌کند و صداهایی می‌شنود که به او دستور می‌دهند به دیگران آسیب برساند. همچنین احساس می‌کرد کسی او را تعقیب می‌کند.\r\n\r\nبه‌گزارش لایوساینس، علائم دختر نوجوان فقط به توهم محدود نبود. بدنش می‌لرزید، عرق می‌کرد، ضربان قلبش بالا رفته بود و تند و سطحی نفس می‌کشید. او هنگام صحبت با پزشکان، طوری به دایناسور خیالی واکنش نشان می‌داد که انگار واقعاً در اتاق حضور دارد.\r\n\r\nدختر ادعا می‌کرد از حدود چهار سال قبل چنین توهم‌هایی داشته است، اما والدینش می‌گفتند رفتارهای غیرعادی او از دو روز پیش شروع شده‌اند. البته آن‌ها متوجه شده بودند که دخترشان در یک ماه گذشته علاقه‌ی کمتری به درس و فعالیت‌های روزمره نشان می‌دهد.\r\n\r\nپزشکان با دیدن وضعیت جسمی بیمار احتمال دادند که توهم‌ها به مشکلی در مغز مربوط باشند. آن‌ها ابتدا از مغز دختر سی‌تی‌اسکن گرفتند، اما نشانه‌ای از خون‌ریزی یا تورم دیده نشد. نوار مغز نیز نتیجه‌ی غیرعادی نداشت. پزشکان همچنین تلاش کردند از مایع مغزی‌نخاعی او نمونه بگیرند تا احتمال عفونت یا سایر بیماری‌ها را بررسی کنند، اما تلاش اول موفقیت‌آمیز نبود.",
+        "slug": "راز-دایناسور-سبز-پرنده-توهم-عجیب-دختری-۱۶-ساله-ریشهای-غیرمنتظره-داشت",
+        "status": "RJ",
+        "created_at": "2026-10-19T21:39:22.919Z",
+        "published_at": "2026-10-19T21:38:48Z",
+        "updated_at": "2026-10-20T11:52:00.927Z",
+        "author": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 1,
+    "fields": {
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "content": "جالب بود",
+        "post": 10,
+        "reading_time": 5,
+        "created_at": "2026-10-07T09:29:44.442Z",
+        "updated_at": "2026-10-07T09:36:00.546Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 2,
+    "fields": {
+        "first_name": "Alireza",
+        "last_name": "Shariaat",
+        "content": "salam",
+        "post": 10,
+        "reading_time": 5,
+        "created_at": "2026-10-07T09:35:43.394Z",
+        "updated_at": "2026-10-07T09:35:43.394Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 3,
+    "fields": {
+        "first_name": "reza",
+        "last_name": "javid",
+        "content": "OMG",
+        "post": 9,
+        "reading_time": 5,
+        "created_at": "2026-10-14T21:41:27.375Z",
+        "updated_at": "2026-10-14T21:41:27.375Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 5,
+    "fields": {
+        "first_name": "reza",
+        "last_name": "javid",
+        "content": "OMG",
+        "post": 9,
+        "reading_time": 5,
+        "created_at": "2026-10-14T21:42:57.428Z",
+        "updated_at": "2026-10-14T21:42:57.428Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 6,
+    "fields": {
+        "first_name": "Alireza",
+        "last_name": "Shariaat",
+        "content": "AASSSS",
+        "post": 9,
+        "reading_time": 5,
+        "created_at": "2026-10-14T21:43:12.925Z",
+        "updated_at": "2026-10-14T21:43:12.925Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 7,
+    "fields": {
+        "first_name": "Ali",
+        "last_name": "Ahmadi",
+        "content": "Awli",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:14:49.662Z",
+        "updated_at": "2026-10-17T22:15:28.055Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 8,
+    "fields": {
+        "first_name": "Alireza",
+        "last_name": "Shariaat",
+        "content": "sxdcfbhlm",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:17:20.584Z",
+        "updated_at": "2026-10-17T22:17:20.584Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 9,
+    "fields": {
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "content": "sdfbnm",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:23:20.713Z",
+        "updated_at": "2026-10-19T16:21:49.655Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 10,
+    "fields": {
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "content": "سشنغاتتن",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:26:42.225Z",
+        "updated_at": "2026-10-19T16:21:49.654Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 11,
+    "fields": {
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "content": "سشنغاتتن",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:26:58.331Z",
+        "updated_at": "2026-10-17T22:26:58.331Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 12,
+    "fields": {
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "content": "سشنغاتتن",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:31:43.698Z",
+        "updated_at": "2026-10-17T22:31:43.698Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 13,
+    "fields": {
+        "first_name": "sara",
+        "last_name": "daniali",
+        "content": "Absolute cinema",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:32:13.419Z",
+        "updated_at": "2026-10-17T22:32:26.795Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 14,
+    "fields": {
+        "first_name": "sara",
+        "last_name": "daniali",
+        "content": "Absolute cinema",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:32:32.265Z",
+        "updated_at": "2026-10-19T16:21:49.654Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 15,
+    "fields": {
+        "first_name": "sara",
+        "last_name": "daniali",
+        "content": "Absolute cinema",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:32:36.477Z",
+        "updated_at": "2026-10-19T16:21:49.654Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 16,
+    "fields": {
+        "first_name": "Danial",
+        "last_name": "شریعت",
+        "content": "adasd",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:35:51.178Z",
+        "updated_at": "2026-10-19T16:21:49.653Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 17,
+    "fields": {
+        "first_name": "Danial",
+        "last_name": "شریعت",
+        "content": "adasd",
+        "post": 8,
+        "reading_time": 5,
+        "created_at": "2026-10-17T22:36:18.123Z",
+        "updated_at": "2026-10-19T16:21:49.650Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 18,
+    "fields": {
+        "first_name": "gholam",
+        "last_name": "hosseini",
+        "content": "LOL",
+        "post": 10,
+        "reading_time": 5,
+        "created_at": "2026-10-19T16:50:22.061Z",
+        "updated_at": "2026-10-19T16:50:22.061Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 19,
+    "fields": {
+        "first_name": "مرتضی",
+        "last_name": "عزیزی",
+        "content": "میو",
+        "post": 10,
+        "reading_time": 5,
+        "created_at": "2026-10-19T17:01:34.625Z",
+        "updated_at": "2026-10-19T17:01:34.625Z",
+        "active": false
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 20,
+    "fields": {
+        "first_name": "Matin",
+        "last_name": "lopi",
+        "content": "salam",
+        "post": 10,
+        "reading_time": 5,
+        "created_at": "2026-10-19T17:06:33.834Z",
+        "updated_at": "2026-10-19T17:06:57.608Z",
+        "active": true
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 21,
+    "fields": {
+        "first_name": "asghar",
+        "last_name": "alirezaei",
+        "content": "ضعیف بود",
+        "post": 10,
+        "reading_time": 5,
+        "created_at": "2026-10-19T17:35:48.514Z",
+        "updated_at": "2026-10-19T17:38:33.851Z",
+        "active": true
+    }
+},
+{
+    "model": "ticket.ticket",
+    "pk": 14,
+    "fields": {
+        "message": "sdfghjm,mnfd",
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "email": "alirezashariaat84@gmail.com",
+        "phone": null,
+        "subject": "financial",
+        "response": null,
+        "status": "URP",
+        "created_at": "2026-10-01T12:03:26.943Z"
+    }
+},
+{
+    "model": "ticket.ticket",
+    "pk": 15,
+    "fields": {
+        "message": "dfghjm",
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "email": "alirezashariaat84@gmail.com",
+        "phone": null,
+        "subject": "help",
+        "response": "Salam",
+        "status": "RP",
+        "created_at": "2026-10-01T12:04:41.541Z"
+    }
+},
+{
+    "model": "ticket.ticket",
+    "pk": 16,
+    "fields": {
+        "message": "سلام",
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "email": "alirezashariaat84@gmail.com",
+        "phone": null,
+        "subject": "help",
+        "response": null,
+        "status": "URP",
+        "created_at": "2026-10-01T12:10:15.229Z"
+    }
+},
+{
+    "model": "ticket.ticket",
+    "pk": 17,
+    "fields": {
+        "message": "Assfsf",
+        "first_name": "soraya",
+        "last_name": "farbodan",
+        "email": null,
+        "phone": "09389965322",
+        "subject": "financial",
+        "response": null,
+        "status": "URP",
+        "created_at": "2026-10-01T12:14:39.338Z"
+    }
+},
+{
+    "model": "ticket.ticket",
+    "pk": 18,
+    "fields": {
+        "message": "sgd",
+        "first_name": "علیرضا",
+        "last_name": "شریعت",
+        "email": "alirezashariaat84@gmail.com",
+        "phone": "9173859513",
+        "subject": "suggestion",
+        "response": null,
+        "status": "URP",
+        "created_at": "2026-10-05T17:58:44.292Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2026-09-11T23:03:23.158Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Salam",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2026-09-12T12:23:03.126Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Salam",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0648\\u0636\\u0639\\u06cc\\u062a \\u0627\\u0646\\u062a\\u0634\\u0627\\u0631\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2026-09-12T19:19:28.253Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "2",
+        "object_repr": "ایجنت‌های OpenAI پیش از هک هاگینگ فیس به RubyGems حمله کرده بودند",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2026-09-22T16:00:00.351Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "3",
+        "object_repr": "چت‌جی‌پی‌تی به تسهیل تیراندازی در یک مدرسه آمریکایی متهم شد!",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2026-09-22T16:01:12.194Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "4",
+        "object_repr": "آپدیت One UI 9 گوشی‌های سامسونگ تأخیر خورد",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2026-09-22T16:03:18.545Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "5",
+        "object_repr": "نرم‌افزار قدرتمند پریمیر به اندروید آمد؛ رایگان و مجهز به قالب‌های آماده یوتیوب",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2026-09-22T16:04:17.551Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "6",
+        "object_repr": "بیتس ۳۶۰ رونمایی شد؛ هدفون کوبنده اپل با قابلیت شخصی‌سازی بالشتک‌ها",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2026-09-22T16:05:01.566Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "7",
+        "object_repr": "رکورد چاپ پول شکست",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2026-09-22T16:06:01.468Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "8",
+        "object_repr": "شوالیه تاریکی؛ مدل ۱٬۰۰۱ اسب‌بخاری لامبورگینی رونمایی شد",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2026-09-22T16:07:11.364Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "9",
+        "object_repr": "مایکروسافت در اقدامی تاریخی، مجموعه Halo را به ناشر بازی‌های Call of Duty واگذار کرد",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2026-09-22T16:08:10.863Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "10",
+        "object_repr": "ایکس‌باکس باز هم تعدیل نیرو کرد؛ احتمال تعطیلی سازنده بازی هل‌بلید",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2026-09-22T16:09:42.540Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "11",
+        "object_repr": "قابلیت‌های کاربردی جیمیل اندروید برای رهایی از شلوغی ایمیل‌ها",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2026-09-29T21:00:21.500Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "11",
+        "object_repr": "قابلیت‌های کاربردی جیمیل اندروید برای رهایی از شلوغی ایمیل‌ها",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0648\\u0636\\u0639\\u06cc\\u062a \\u0627\\u0646\\u062a\\u0634\\u0627\\u0631\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2026-09-30T09:46:54.446Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "1",
+        "object_repr": "help",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2026-09-30T09:46:54.447Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "2",
+        "object_repr": "suggestion",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2026-09-30T10:20:26.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "3",
+        "object_repr": "suggestion",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2026-09-30T10:20:26.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "4",
+        "object_repr": "suggestion",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2026-09-30T10:20:26.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "5",
+        "object_repr": "suggestion",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2026-09-30T10:20:26.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "6",
+        "object_repr": "suggestion",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2026-09-30T10:20:26.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "7",
+        "object_repr": "suggestion",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2026-09-30T10:20:26.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "8",
+        "object_repr": "financial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2026-09-30T10:20:26.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "9",
+        "object_repr": "financial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2026-09-30T10:21:24.209Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "10",
+        "object_repr": "financial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2026-09-30T10:21:24.209Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "11",
+        "object_repr": "financial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2026-10-01T11:28:06.278Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "12",
+        "object_repr": "suggestion",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2026-10-01T11:28:19.395Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "13",
+        "object_repr": "suggestion",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u067e\\u0627\\u0633\\u062e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2026-10-01T11:29:59.637Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "13",
+        "object_repr": "suggestion",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u067e\\u0627\\u0633\\u062e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2026-10-01T11:39:49.647Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "13",
+        "object_repr": "suggestion",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2026-10-01T12:04:58.009Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "ticket",
+            "ticket"
+        ],
+        "object_id": "15",
+        "object_repr": "help",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u067e\\u0627\\u0633\\u062e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2026-10-07T09:36:00.548Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "1",
+        "object_repr": "Comment object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2026-10-14T21:41:55.654Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "4",
+        "object_repr": "Comment object (4)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2026-10-17T22:15:28.057Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "7",
+        "object_repr": "Comment object (7)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2026-10-17T22:32:26.796Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "13",
+        "object_repr": "Comment object (13)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2026-10-19T16:21:49.652Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "17",
+        "object_repr": "Comment object (17)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2026-10-19T16:21:49.653Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "16",
+        "object_repr": "Comment object (16)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2026-10-19T16:21:49.654Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "15",
+        "object_repr": "Comment object (15)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2026-10-19T16:21:49.654Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "14",
+        "object_repr": "Comment object (14)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2026-10-19T16:21:49.655Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "10",
+        "object_repr": "Comment object (10)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2026-10-19T16:21:49.655Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "9",
+        "object_repr": "Comment object (9)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2026-10-19T17:06:57.610Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "object_id": "20",
+        "object_repr": "Comment object (20)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2026-10-19T17:38:33.852Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "10",
+        "object_repr": "ایکس‌باکس باز هم تعدیل نیرو کرد؛ احتمال تعطیلی سازنده بازی هل‌بلید",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u062f\\u06cc\\u062f\\u06af\\u0627\\u0647\", \"object\": \"Comment object (21)\", \"fields\": [\"\\u0646\\u0645\\u0627\\u06cc\\u0634 / \\u0639\\u062f\\u0645 \\u0646\\u0645\\u0627\\u06cc\\u0634\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2026-10-19T21:39:22.920Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "12",
+        "object_repr": "راز دایناسور سبز پرنده؛ توهم عجیب دختری ۱۶ ساله ریشه‌ای غیرمنتظره داشت",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2026-10-19T21:45:07.034Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "12",
+        "object_repr": "راز دایناسور سبز پرنده؛ توهم عجیب دختری ۱۶ ساله ریشه‌ای غیرمنتظره داشت",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0648\\u0636\\u0639\\u06cc\\u062a \\u0627\\u0646\\u062a\\u0634\\u0627\\u0631\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2026-10-19T21:46:33.055Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "12",
+        "object_repr": "راز دایناسور سبز پرنده؛ توهم عجیب دختری ۱۶ ساله ریشه‌ای غیرمنتظره داشت",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2026-10-19T21:47:16.254Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "12",
+        "object_repr": "راز دایناسور سبز پرنده؛ توهم عجیب دختری ۱۶ ساله ریشه‌ای غیرمنتظره داشت",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0648\\u0636\\u0639\\u06cc\\u062a \\u0627\\u0646\\u062a\\u0634\\u0627\\u0631\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2026-10-19T21:47:27.216Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "12",
+        "object_repr": "راز دایناسور سبز پرنده؛ توهم عجیب دختری ۱۶ ساله ریشه‌ای غیرمنتظره داشت",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0648\\u0636\\u0639\\u06cc\\u062a \\u0627\\u0646\\u062a\\u0634\\u0627\\u0631\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2026-10-20T11:52:00.928Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "12",
+        "object_repr": "راز دایناسور سبز پرنده؛ توهم عجیب دختری ۱۶ ساله ریشه‌ای غیرمنتظره داشت",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0648\\u0636\\u0639\\u06cc\\u062a \\u0627\\u0646\\u062a\\u0634\\u0627\\u0631\"]}}]"
+    }
+}
+]

@@ -28,7 +28,7 @@ class Post(models.Model):
     title = models.CharField(max_length=150, verbose_name='عنوان')
     content = models.TextField(verbose_name='محتوا')
     slug = models.SlugField(max_length=200, unique=True,
-                            blank=True, verbose_name='اسلاگ')
+                            blank=True, verbose_name='اسلاگ', allow_unicode=True)
     status = models.CharField(max_length=3, choices=Status.choices,
                               default=Status.DRAFT, verbose_name='وضعیت انتشار')
     # Date related
@@ -67,6 +67,8 @@ class Comment(models.Model):
     content = models.TextField(verbose_name='محتوا')
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments', verbose_name='پست')
+    reading_time = models.PositiveIntegerField(
+        default=5, verbose_name='زمان مطالعه')
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

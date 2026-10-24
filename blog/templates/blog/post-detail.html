@@ -1,182 +1,734 @@
-{% extends "base.html" %}
 
-{% block title %}{{post.title}}{% endblock title %}
+{% extends "base.html" %}
+{% load blog_tags %}
+{% load jformat %}
+{% block title %}{{ post.title }} | وبلاگ من{% endblock title %}
+
+{% block hero_title %}مطالعه مقاله{% endblock hero_title %}
+
+{% block hero_description %}
+مطالب، تجربیات و ایده‌های وبلاگ
+{% endblock hero_description %}
 
 {% block extra_head %}
 <style>
-    .page {
-        max-width: 700px;
+    :root {
+        --accent: #3b82f6;
+        --accent-dark: #2563eb;
+        --accent-soft: #eff6ff;
+        --ink: #172337;
+        --ink-soft: #64748b;
+        --line: #e2e8f0;
+        --paper: #ffffff;
+        --surface: #f8fafc;
+        --danger: #b91c1c;
+    }
+
+    .detail-page {
+        max-width: 850px;
         margin: 0 auto;
-        padding: 56px 24px 80px;
     }
 
-    .kicker {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 28px;
-    }
+    /* Article header */
 
-    .kicker::before {
-        content: "";
-        width: 34px;
-        height: 3px;
-        background: var(--accent);
-        border-radius: 2px;
-    }
-
-    .kicker span {
-        font-size: 14px;
-        color: var(--ink-soft);
-        font-weight: 500;
-    }
-
-    h1 {
-        font-size: clamp(28px, 4vw, 40px);
-        font-weight: 800;
-        line-height: 1.5;
-        margin: 0 0 28px;
-        color: var(--ink);
-    }
-
-    .byline {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 10px 22px;
-        padding: 20px 0;
-        border-top: 1px solid var(--line);
+    .article-header {
+        padding-bottom: 28px;
         border-bottom: 1px solid var(--line);
-        margin-bottom: 44px;
     }
 
-    .byline-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 14px;
-        color: var(--ink-soft);
-    }
-
-    .byline-item strong {
-        color: var(--ink);
-        font-weight: 600;
-    }
-
-    .byline-item svg {
-        width: 16px;
-        height: 16px;
-        stroke: var(--accent);
-        flex-shrink: 0;
-    }
-
-    .content {
-        font-size: 17px;
-        color: var(--ink);
-    }
-
-    .content p {
-        margin: 0 0 22px;
-    }
-
-    .content img {
-        max-width: 100%;
-        border-radius: 6px;
-        margin: 12px 0;
-    }
-
-    .content a {
-        color: var(--accent);
-        text-decoration-color: var(--line);
-        text-underline-offset: 3px;
-    }
-
-    .post-footer {
-        margin-top: 60px;
-        padding-top: 24px;
-        border-top: 1px solid var(--line);
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .updated-pill {
+    .article-label {
         display: inline-flex;
         align-items: center;
         gap: 8px;
+        padding: 7px 13px;
+        margin-bottom: 20px;
+        border-radius: 9px;
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .article-label::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+    }
+
+    .article-title {
+        margin: 0 0 24px;
+        color: var(--ink);
+        font-size: clamp(26px, 4vw, 38px);
+        font-weight: 800;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px 24px;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--ink-soft);
+        font-size: 13px;
+    }
+
+    .meta-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: var(--surface);
+        color: var(--accent);
+        font-size: 17px;
+    }
+
+    .meta-item strong {
+        color: var(--ink);
+        font-weight: 700;
+    }
+
+    /* Article content */
+
+    .article-content {
+        padding: 32px 0;
+        color: #334155;
+        font-size: 16px;
+        line-height: 2.3;
+        overflow-wrap: anywhere;
+    }
+
+    .article-content p {
+        margin: 0 0 22px;
+    }
+
+    .article-content h2,
+    .article-content h3,
+    .article-content h4 {
+        color: var(--ink);
+        line-height: 1.9;
+        margin: 30px 0 12px;
+    }
+
+    .article-content h2 {
+        font-size: 25px;
+    }
+
+    .article-content h3 {
+        font-size: 21px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+        padding-right: 25px;
+        margin: 15px 0 25px;
+    }
+
+    .article-content li {
+        margin-bottom: 8px;
+    }
+
+    .article-content img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 25px auto;
+        border-radius: 14px;
+    }
+
+    .article-content a {
+        color: var(--accent-dark);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .article-content blockquote {
+        margin: 25px 0;
+        padding: 18px 22px;
+        border-right: 4px solid var(--accent);
+        border-radius: 8px 0 0 8px;
+        background: var(--surface);
+        color: var(--ink-soft);
+    }
+
+    .article-content pre {
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 18px;
+        direction: ltr;
+        text-align: left;
+        background: #172337;
+        color: #f8fafc;
+        border-radius: 12px;
+        line-height: 1.8;
+    }
+
+    /* Article footer */
+
+    .article-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 22px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+    }
+
+    .updated-info {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--ink-soft);
+        font-size: 13px;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 700;
+        transition: .2s ease;
+    }
+
+    .back-link:hover {
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        border-color: #bfdbfe;
+    }
+
+    /* Comments */
+
+    .comments-section {
+        margin-top: 48px;
+    }
+
+    .section-heading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .section-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 43px;
+        height: 43px;
+        flex-shrink: 0;
+        border-radius: 12px;
         background: var(--accent-soft);
         color: var(--accent);
+        font-size: 21px;
+    }
+
+    .section-heading h2 {
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 800;
+    }
+
+    .section-heading p {
+        margin-top: 3px;
+        color: var(--ink-soft);
         font-size: 13px;
-        font-weight: 500;
-        padding: 8px 14px;
+    }
+
+    .comment-form {
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #fff;
+    }
+
+    .comment-form p {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0 0 18px;
+    }
+
+    .comment-form label {
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .comment-form input:not([type="submit"]),
+    .comment-form textarea,
+    .comment-form select {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--surface);
+        color: var(--ink);
+        font-family: inherit;
+        font-size: 14px;
+        transition: border-color .2s, box-shadow .2s;
+    }
+
+    .comment-form textarea {
+        min-height: 130px;
+        resize: vertical;
+        line-height: 1.9;
+    }
+
+    .comment-form input:focus,
+    .comment-form textarea:focus,
+    .comment-form select:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
+    }
+
+    .comment-form .helptext {
+        color: var(--ink-soft);
+        font-size: 12px;
+    }
+
+    .comment-form .errorlist {
+        list-style: none;
+        margin: 0;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: #fef2f2;
+        color: var(--danger);
+        font-size: 13px;
+    }
+
+    .submit-comment {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 10px;
+        background: var(--accent);
+        color: white;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background .2s, transform .2s;
+    }
+
+    .submit-comment:hover {
+        background: var(--accent-dark);
+        transform: translateY(-1px);
+    }
+
+    /* Comment list */
+
+    .comments-list {
+        margin-top: 35px;
+    }
+
+    .comments-list-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .comments-list-header h3 {
+        color: var(--ink);
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+    .comments-badge {
+        padding: 5px 11px;
         border-radius: 20px;
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        font-size: 12px;
+        font-weight: 700;
     }
 
-    .updated-pill svg {
-        width: 14px;
-        height: 14px;
-        stroke: var(--accent);
+    .comment-card {
+        display: flex;
+        gap: 15px;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line);
     }
 
-    @media (max-width: 480px) {
-        .page {
-            padding: 40px 18px 60px;
+    .comment-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 43px;
+        height: 43px;
+        flex-shrink: 0;
+        border-radius: 13px;
+        background: var(--surface);
+        color: var(--accent);
+        font-size: 19px;
+        font-weight: 800;
+    }
+
+    .comment-main {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .comment-header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 7px 13px;
+        margin-bottom: 9px;
+    }
+
+    .comment-author {
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .comment-date {
+        color: #94a3b8;
+        font-size: 12px;
+    }
+
+    .comment-text {
+        color: #475569;
+        font-size: 14px;
+        line-height: 2;
+        overflow-wrap: anywhere;
+    }
+
+    .empty-comments {
+        padding: 35px 20px;
+        border: 1px dashed #cbd5e1;
+        border-radius: 14px;
+        text-align: center;
+        color: var(--ink-soft);
+        font-size: 14px;
+    }
+
+    .empty-comments span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    @media (max-width: 600px) {
+        .article-title {
+            font-size: 26px;
         }
-        .byline {
-            gap: 8px 16px;
+
+        .article-content {
+            font-size: 15px;
+            line-height: 2.1;
         }
-        .post-footer {
-            justify-content: flex-start;
+
+        .comment-form {
+            padding: 18px;
+        }
+
+        .article-footer {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .meta-item {
+            font-size: 12px;
+        }
+
+        .comment-card {
+            gap: 11px;
         }
     }
+    /* Latest Posts */
+
+.latest-posts-section {
+    margin-top: 48px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    box-shadow: 0 8px 30px rgba(23, 35, 55, 0.04);
+}
+
+.latest-posts-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.latest-posts-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 5px 11px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.latest-posts-heading h2 {
+    margin: 0 0 7px;
+    color: var(--ink);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.latest-posts-heading p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.latest-posts-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--accent-dark);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.latest-posts-more:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.latest-posts-content {
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+}
+
+/* سازگاری با قالب فایل last_posts.html */
+
+.latest-posts-content ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.latest-posts-content li {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.latest-posts-content li:hover {
+    transform: translateY(-4px);
+    border-color: #bfdbfe;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+}
+
+.latest-posts-content a {
+    color: var(--ink);
+    font-weight: 700;
+    line-height: 1.9;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.latest-posts-content a:hover {
+    color: var(--accent-dark);
+}
+
+@media (max-width: 600px) {
+    .latest-posts-section {
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .latest-posts-heading h2 {
+        font-size: 19px;
+    }
+
+    .latest-posts-content ul {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 {% endblock extra_head %}
 
 {% block content %}
-<div class="page">
-    <div class="kicker">
-        <span>جزئیات پست</span>
-    </div>
+<div class="detail-page">
 
-    <h1>{{post.title}}</h1>
+    <article>
+        <header class="article-header">
 
-    <div class="byline">
-        <div class="byline-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="4"/>
-                <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
-            </svg>
-            نوشته شده توسط <strong>{{post.author}}</strong>
+            <span class="article-label">جزئیات مقاله</span>
+
+            <h1 class="article-title">{{ post.title }}</h1>
+
+            <div class="article-meta">
+
+                <div class="meta-item">
+                    <span class="meta-icon">♙</span>
+                    <span>
+                        نویسنده:
+                        <strong>{{ post.author }}</strong>
+                    </span>
+                </div>
+
+                <div class="meta-item">
+                    <span class="meta-icon">▦</span>
+                    <span>
+                        انتشار:
+                        <strong>
+                            {{ post.published_at|jformat:"%Y/%m/%d" }}
+                        </strong>
+                    </span>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="article-content">
+            {{ post.content|linebreaks }}
         </div>
-        <div class="byline-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="16" rx="2"/>
-                <path d="M3 10h18M8 3v4M16 3v4"/>
-            </svg>
-            منتشر شده در <strong>{{post.published_at}}</strong>
+
+        <footer class="article-footer">
+
+            <div class="updated-info">
+                <span>◷</span>
+                <span>
+                    آخرین به‌روزرسانی:
+                    {{ post.published_at|jformat:"%Y/%m/%d" }}
+                </span>
+            </div>
+
+            <a href="{% url 'blog:post_list' %}" class="back-link">
+                ← بازگشت به مطالب
+            </a>
+
+        </footer>
+    </article>
+<section class="latest-posts-section">
+    <div class="latest-posts-heading">
+        <div>
+            <span class="latest-posts-label">مطالعه بیشتر</span>
+            <h2>آخرین مطالب وبلاگ</h2>
+            <p>مطالب جدید وبلاگ را دنبال کنید.</p>
         </div>
+
+        <a href="{% url 'blog:post_list' %}" class="latest-posts-more">
+            همه مطالب
+            <span>←</span>
+        </a>
     </div>
 
-    <div class="content">
-        {{post.content}}
+    <div class="latest-posts-content">
+        {% latest_posts exclude_slug=post.slug %}
     </div>
+</section>
+    <section class="comments-section">
 
-    <div class="post-footer">
-        <span class="updated-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 12a9 9 0 1 0 3-6.7"/>
-                <path d="M3 4v5h5"/>
-            </svg>
-            آخرین تغییر: {{post.updated_at}}
-        </span>
-    </div>
-    <div>
-        <form method="POST" action="{% url "blog:post_comment" post.slug%}" >
+        <div class="section-heading">
+            <div class="section-icon">✎</div>
+            <div>
+                <h2>دیدگاه خود را بنویسید</h2>
+                <p>نظر شما می‌تواند به بهتر شدن این مطلب کمک کند.</p>
+            </div>
+        </div>
+
+        <form
+            class="comment-form"
+            method="post"
+            action="{% url 'blog:post_comment' post.slug %}"
+        >
             {% csrf_token %}
-            
-            {{form.as_p}}
-            
-            <input type='submit' value='ثبت دیدگاه'>
+
+            {{ form.as_p }}
+
+            <button class="submit-comment" type="submit">
+                ثبت دیدگاه
+                <span>←</span>
+            </button>
         </form>
-    </div>
+
+        <div class="comments-list">
+
+            <div class="comments-list-header">
+                <h3>دیدگاه‌های کاربران</h3>
+
+                <span class="comments-badge">
+                    {{ comments.count }} دیدگاه
+                </span>
+            </div>
+
+            {% for comment in comments %}
+                <article class="comment-card">
+
+            <div class="comment-avatar">
+                {{ comment.first_name|slice:":1" }}
+            </div>
+                    <div class="comment-main">
+
+                        <div class="comment-header">
+                            <span class="comment-author">
+                                {{ comment.first_name }}
+                                {{ comment.last_name }}
+                            </span>
+
+                            <span class="comment-date">
+                                {{ comment.created_at|jformat:"%Y/%m/%d - %H:%M" }}
+                            </span>
+                        </div>
+
+                        <p class="comment-text">
+                            {{ comment.content|linebreaksbr }}
+                        </p>
+
+                    </div>
+                </article>
+
+            {% empty %}
+                <div class="empty-comments">
+                    <span>☰</span>
+                    هنوز دیدگاهی ثبت نشده است.
+                    اولین دیدگاه را شما بنویسید.
+                </div>
+            {% endfor %}
+
+        </div>
+    </section>
+
 </div>
 {% endblock content %}

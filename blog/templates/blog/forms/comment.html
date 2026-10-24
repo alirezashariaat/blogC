@@ -1,9 +1,234 @@
-{% extends "base.html" %}
-{% block content %}
-<form method = "post" action="{% url 'blog:post_comment' post.slug%}">
-{% csrf_token %}
-{{form.as_p}}
-<input type='submit' value='ثبت دیدگاه'>
 
-</form>
+{% extends "base.html" %}
+
+{% block title %}ثبت دیدگاه | {{ post.title }}{% endblock title %}
+
+{% block hero_title %}ثبت دیدگاه{% endblock hero_title %}
+
+{% block hero_description %}
+نظر خود را درباره این مقاله با ما به اشتراک بگذارید.
+{% endblock hero_description %}
+
+{% block extra_head %}
+<style>
+    .comment-page {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .comment-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 30px;
+        box-shadow: 0 8px 30px rgba(30, 58, 95, 0.05);
+    }
+
+    .comment-card h2 {
+        color: #172337;
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .comment-description {
+        color: #64748b;
+        font-size: 14px;
+        line-height: 2;
+        margin-bottom: 24px;
+    }
+
+    .post-reference {
+        padding: 14px 16px;
+        margin-bottom: 25px;
+        border-right: 4px solid #3b82f6;
+        border-radius: 8px;
+        background: #eff6ff;
+    }
+
+    .post-reference span {
+        display: block;
+        color: #64748b;
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .post-reference a {
+        color: #1d4ed8;
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        overflow-wrap: anywhere;
+    }
+
+    .post-reference a:hover {
+        text-decoration: underline;
+    }
+
+    .comment-form p {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0 0 20px;
+    }
+
+    .comment-form label {
+        color: #334155;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .comment-form input:not([type="checkbox"]):not([type="radio"]),
+    .comment-form textarea,
+    .comment-form select {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        background: #f8fafc;
+        color: #172337;
+        font-family: "Vazirmatn", Tahoma, sans-serif;
+        font-size: 14px;
+        transition: border-color .2s, box-shadow .2s;
+    }
+
+    .comment-form textarea {
+        min-height: 150px;
+        resize: vertical;
+        line-height: 2;
+    }
+
+    .comment-form input:focus,
+    .comment-form textarea:focus,
+    .comment-form select:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
+    }
+
+    .comment-form .helptext {
+        color: #64748b;
+        font-size: 12px;
+    }
+
+    .comment-form .errorlist {
+        list-style: none;
+        padding: 10px 12px;
+        margin: 0;
+        border-radius: 8px;
+        background: #fef2f2;
+        color: #b91c1c;
+        font-size: 13px;
+    }
+
+    .form-actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .submit-button,
+    .back-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: .2s ease;
+    }
+
+    .submit-button {
+        border: none;
+        background: #3b82f6;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .submit-button:hover {
+        background: #2563eb;
+        transform: translateY(-1px);
+    }
+
+    .back-button {
+        border: 1px solid #e2e8f0;
+        color: #475569;
+        background: #ffffff;
+    }
+
+    .back-button:hover {
+        background: #f8fafc;
+        border-color: #cbd5e1;
+    }
+
+    @media (max-width: 550px) {
+        .comment-card {
+            padding: 20px;
+        }
+
+        .comment-card h2 {
+            font-size: 19px;
+        }
+
+        .form-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .submit-button,
+        .back-button {
+            width: 100%;
+        }
+    }
+</style>
+{% endblock extra_head %}
+
+{% block content %}
+<div class="comment-page">
+
+    <section class="comment-card">
+
+        <h2>دیدگاه شما</h2>
+
+        <p class="comment-description">
+            با تکمیل فرم زیر می‌توانید نظر خود را درباره مقاله ثبت کنید.
+        </p>
+
+        <div class="post-reference">
+            <span>در حال ثبت دیدگاه برای مقاله:</span>
+            <a href="{{ post.get_absolute_url }}">
+                {{ post.title }}
+            </a>
+        </div>
+
+        <form
+            class="comment-form"
+            method="post"
+            action="{% url 'blog:post_comment' post.slug %}"
+        >
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div class="form-actions">
+                <button class="submit-button" type="submit">
+                    ثبت دیدگاه
+                    <span>←</span>
+                </button>
+
+                <a class="back-button" href="{{ post.get_absolute_url }}">
+                    بازگشت به مقاله
+                </a>
+            </div>
+        </form>
+
+    </section>
+
+</div>
 {% endblock content %}

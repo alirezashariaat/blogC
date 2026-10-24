@@ -13,3 +13,8 @@ class CommentForm(forms.ModelForm):
             'last_name': forms.TextInput(attrs={'placeholder': 'نام خانوادگی'}),
             'content': forms.Textarea(attrs={'rows': 4, 'placeholder': 'دیدگاه شما'}),
         }
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField(label='جستجو', max_length=100, widget=forms.TextInput(
+        attrs={'placeholder': 'جستجو...'}))
