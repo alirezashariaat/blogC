@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -128,7 +129,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+MEDIA_URL = '/media/'
+# آدرس منطقی برای دسترسی به فایل های رسانه ای
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# آدرس فیزیکی برای ذخیره فایل های رسانه ای
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration

@@ -16,5 +16,5 @@ class CommentForm(forms.ModelForm):
 
 
 class SearchForm(forms.Form):
-    query = forms.CharField(label='جستجو', max_length=100, widget=forms.TextInput(
-        attrs={'placeholder': 'جستجو...'}))
+    query = forms.CharField(
+        label='جستجو', max_length=100, widget=forms.TextInput())

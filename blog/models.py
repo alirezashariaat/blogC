@@ -80,3 +80,17 @@ class Comment(models.Model):
         verbose_name = 'دیدگاه'
         verbose_name_plural = 'دیدگاه ها'
         indexes = [models.Index(fields=['first_name', 'created_at'])]
+
+
+class Image(models.Model):
+    image = models.ImageField(upload_to='post_images/', verbose_name='تصویر')
+    title = models.CharField(max_length=100, verbose_name='عنوان')
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='images', verbose_name='پست')
+    description = models.TextField(verbose_name='توضیحات')
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name='تاریخ ایجاد')
+
+    class Meta:
+        verbose_name = 'تصویر'
+        verbose_name_plural = 'تصاویر'
