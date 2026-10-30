@@ -146,6 +146,27 @@
             font-size: 20px;
         }
     }
+    .post-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    background: #f1f5f9;
+    }       
+
+    .post-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        transition: transform .3s ease;
+    }
+
+    .post-card:hover .post-image img {
+        transform: scale(1.04);
+    }
 </style>
 {% endblock extra_head %}
 
@@ -161,42 +182,56 @@
 <div class="posts-grid">
 
     {% for post in posts %}
-        <article class="post-card">
+    <article class="post-card">
 
-            <span class="post-category">مقاله</span>
+       
 
-            <h3 class="post-title">
-                <a href="{{ post.get_absolute_url }}">
-                    {{ post.title }}
-                </a>
-            </h3>
+        <span class="post-category">مقاله</span>
 
-            <p class="post-excerpt">
-                {{ post.content|striptags|truncatewords:30 }}
-            </p>
+        <h3 class="post-title">
+            <a href="{{ post.get_absolute_url }}">
+                {{ post.title }}
+            </a>
+        </h3>
 
-            <div class="post-footer">
-                <span class="post-date">
-                    {% if post.published_at %}
-                        {{ post.published_at|jformat:"%Y/%m/%d" }}
-                    {% endif %}
-                </span>
+        <p class="post-excerpt">
+            {{ post.content|striptags|truncatewords:40 }}
+        </p>
+        {% with image=post.images.first %}
+            {% if image and image.image_file %}
+                <div class="post-image">
+                    <img
+                        src="{{ image.image_file.url }}"
+                        alt="{{ post.title }}"
+                        loading="lazy"
+                    >
+                </div>
+            {% endif %}
+        {% endwith %}
+        <div class="post-footer">
 
-                <a class="read-more"
-                   href="{{ post.get_absolute_url }}">
-                    ادامه مطلب ←
-                </a>
-            </div>
+            <span class="post-date">
+                {% if post.published_at %}
+                    {{ post.published_at|jformat:"%Y/%m/%d" }}
+                {% endif %}
+            </span>
 
-        </article>
+            <a class="read-more"
+               href="{{ post.get_absolute_url }}">
+                ادامه مطلب ←
+            </a>
 
-    {% empty %}
-        <div class="empty-posts">
-            <div class="empty-icon">✎</div>
-            <h3>هنوز مطلبی منتشر نشده است</h3>
-            <p>به‌زودی مطالب جدیدی در این بخش قرار می‌گیرد.</p>
         </div>
-    {% endfor %}
+
+    </article>
+
+{% empty %}
+    <div class="empty-posts">
+        <div class="empty-icon">✎</div>
+        <h3>هنوز مطلبی منتشر نشده است</h3>
+        <p>به‌زودی مطالب جدیدی در این بخش قرار می‌گیرد.</p>
+    </div>
+{% endfor %}
 
 </div>
 
